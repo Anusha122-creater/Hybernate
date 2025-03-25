@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Database connection properties -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/TelecommunicationMgmt</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">@Nu1234#</property>
+
+        <!-- Hibernate Dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Show SQL in the console -->
+        <property name="hibernate.show_sql">true</property>
+<property name="hibernate.show_sql">true</property>
+<property name="hibernate.format_sql">true</property>
+
+        <!-- Hibernate DDL (Database) generation -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entity Class Mappings -->
+        <mapping class="com.Telecommunication.entity.BillingCycle"/>
+        <mapping class="com.Telecommunication.entity.Call"/>
+        <mapping class="com.Telecommunication.entity.Inventory"/>
+        <mapping class="com.Telecommunication.entity.Message"/>
+        <mapping class="com.Telecommunication.entity.NetworkElement"/>
+        <mapping class="com.Telecommunication.entity.Payment"/>
+        <mapping class="com.Telecommunication.entity.Subscriber"/>
+
+    </session-factory>
+
+</hibernate-configuration>
